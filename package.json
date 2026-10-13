@@ -1,0 +1,40 @@
+{
+  "name": "aoi",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "vp run --recursive build",
+    "check": "vp check",
+    "dev": "vp run --recursive --parallel dev",
+    "typecheck": "vp run --recursive typecheck"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.3",
+    "vite-plus": "^1.1.0"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.1.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "bun",
+      "version": "1.4.3",
+      "onFail": "download"
+    },
+    "runtime": {
+      "name": "bun"
+    }
+  },
+  "engines": {
+    "bun": ">=1.4.0",
+    "node": ">=24.0.0"
+  },
+  "catalog": {
+    "effect": "^4.0.4",
+    "vite-plus": "^1.1.0",
+    "typescript": "^7.0.2"
+  }
+}

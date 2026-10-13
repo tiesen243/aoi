@@ -1,0 +1,40 @@
+# dependencies
+node_modules/
+
+# testing
+coverage/
+
+# production
+.react-router/
+build/
+dist/
+bin/
+out/
+
+# environment variables
+.env*
+!.env.example
+.dev.vars
+
+# logs
+logs/
+*.log
+
+# typescript
+*.tsbuildinfo
+
+# misc
+.cache/
+.DS_Store
+Thumbs.db
+*.pem
+*.bak
+
+# editor & IDE
+.vscode/
+.idea/
+
+# infrastructure
+.cloudflare/
+.wrangler/
+.vercel/

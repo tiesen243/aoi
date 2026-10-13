@@ -1,0 +1,11 @@
+{
+  "extends": "@aoi/tsconfig/react-package.json",
+  "compilerOptions": {
+    "rootDirs": [".", "./.react-router/types"],
+    "types": ["bun", "vite-plus/client"],
+    "paths": {
+      "@/*": ["./app/*"]
+    }
+  },
+  "include": ["app", ".react-router/types/**/*"]
+}

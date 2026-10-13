@@ -1,0 +1,25 @@
+{
+  "name": "@aoi/service-a",
+  "version": "0.0.0",
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "bun --hot run src/index.ts",
+    "prepublishOnly": "vp run build",
+    "start": "bun run dist/index.mjs",
+    "typecheck": "bun check"
+  },
+  "dependencies": {
+    "effect": "catalog:"
+  },
+  "devDependencies": {
+    "@aoi/tsconfig": "workspace:*",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:"
+  }
+}

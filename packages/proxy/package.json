@@ -1,0 +1,25 @@
+{
+  "name": "@aoi/proxy",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "bun run src/index.ts",
+    "prepublishOnly": "vp run build",
+    "start": "bun run dist/index.mjs"
+  },
+  "dependencies": {
+    "@aoi/service-a": "workspace:*",
+    "@aoi/service-b": "workspace:*",
+    "effect": "catalog:"
+  },
+  "devDependencies": {
+    "@aoi/tsconfig": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
